@@ -1,0 +1,9 @@
+<%= form_for @episode do |f| %>
+<%= f.label :guest_id %>
+<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<%= f.label :episode %>
+<%= f.collection_select :number, Episode.all, :id, :number %>
+<%= f.label :rating %>
+<%= f.text_field :rating %>
+<%= f.submit %>
+<% end %>

@@ -3,7 +3,8 @@ class CreateEpisodes < ActiveRecord::Migration[5.0]
     create_table :episodes do |t|
       t.date :date
       t.integer :number
-
+      t.integer :rating
+      t.integer :guest_id
       t.timestamps
     end
   end
