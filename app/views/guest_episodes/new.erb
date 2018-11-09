@@ -1,0 +1,27 @@
+
+<h1>Creating A New Appearance</h1>
+
+<p>Please select Guest, Episode and Rating:</p>
+
+
+<%= form_for @guest_episode do |f| %>
+
+<ul>
+  <li>
+    <%= f.label :guest_id %>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+  </li>
+  <li>
+    <%= f.label :episode_id %>
+    <%= f.collection_select :episode_id, Episode.all, :id, :number %>
+  </li>
+  <li>
+    <%= f.label :rating %>
+    <%= f.select :rating, (1..5) %>
+
+  </li>
+</ul>
+
+  <%= f.submit %>
+
+<% end %>
