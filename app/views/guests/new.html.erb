@@ -1,0 +1,12 @@
+<h1>Create New Guest Appearance</h1>
+
+<%= form_for @guest do |f| %>
+<%= f.label :name %>
+<%= f.text_area :name %>
+<br>
+<%= f.label :occupation %>
+<%= f.text_area :occupation %>
+<%= f.collection_select(:episode, :episode_id @guests, :id, :number)  %>
+<br>
+<%= f.submit "Submit new Guest & Appearance" %>
+<%end %>
