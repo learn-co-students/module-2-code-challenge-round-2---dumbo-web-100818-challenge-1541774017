@@ -1,0 +1,25 @@
+<ol>
+    <li> <%=link_to " Link to Guests", guests_path %> </li>
+    <li> <%=link_to " Link to Episodes", episodes_path %> </li>
+    <li> <%=link_to " Link to Add Guest to Episode", new_appearance_path %> </li>
+</ol>
+<hr>
+
+<% if flash[:error] %>
+  <ul>
+  <% flash[:error].each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+ <% end %>
+<%= form_for @appearance do |f| %>
+  <%= f.label :guest_id %>
+  <%= f.collection_select(:guest_id, @guests, :id, :name) %>
+  <br>
+  <%= f.label :episode_id %>
+  <%= f.collection_select(:episode_id, @episodes, :id, :number) %>
+  <br>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, min: 0, max: 5 %>
+  <%= f.submit %>
+<% end %>

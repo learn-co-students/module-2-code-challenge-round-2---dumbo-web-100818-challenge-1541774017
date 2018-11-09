@@ -1,7 +1,13 @@
+<ol>
+    <li> <%=link_to " Link to Guests", guests_path %> </li>
+    <li> <%=link_to " Link to Episodes", episodes_path %> </li>
+    <li> <%=link_to " Link to Add Guest to Episode", new_appearance_path %> </li>
+</ol>
+<hr>
 <h1>All Episodes</h1>
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <li><%= link_to  "Episode #{episode.number} ", episode%></li>
   <% end %>
 </ul>
