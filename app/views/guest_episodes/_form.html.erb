@@ -1,0 +1,10 @@
+<%= form_for @guest_episode do |f| %>
+<%= f.label :guest_id  %>
+<%= f.text_field :guest_id  %>
+<%= f.label :episode_id  %>
+<%= f.text_field :episode_id  %>
+<%= f.label :rating  %>
+<%= f.text_field :rating  %>
+<%= collection_select(:episode, :episode_id, Episode.all, :id, :episode_name) %>
+<%= f.submit %>
+<% end %>
