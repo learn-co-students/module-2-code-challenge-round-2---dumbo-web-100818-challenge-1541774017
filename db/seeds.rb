@@ -25,3 +25,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+ticket1 = Ticket.create(guest_id: 2, episode_id: 2)
+ticket2 = Ticket.create(guest_id: 5, episode_id: 3)
+ticket3 = Ticket.create(guest_id: 19, episode_id: 7)
+ticket4 = Ticket.create(guest_id: 4, episode_id: 6)
