@@ -8,7 +8,15 @@
 
 Guest.destroy_all
 
+
 require 'csv'
+
+date = Date.parse('2015-09-08')
+
+(1..40).each do |num|
+  Episode.create(date: date, number: num)
+  date = date.next
+end
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'daily_show_guests.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -24,4 +32,3 @@ date = Date.parse('2015-09-08')
   Episode.create(date: date, number: num)
   date = date.next
 end
-

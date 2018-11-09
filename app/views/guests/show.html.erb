@@ -1,0 +1,8 @@
+<h1> <%= @guest.name %> </h1>
+
+<h3> Occupation: </h3>
+ <%= @guest.occupation.capitalize %>
+<h3> Episodes: </h3>
+  <% @episodes.each do |episode| %>
+      <%= link_to episode.date, episode%>
+  <% end %>
