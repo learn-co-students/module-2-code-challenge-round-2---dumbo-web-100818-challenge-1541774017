@@ -1,7 +1,6 @@
 class AppearancesController < ApplicationController
 
   # def index
-  #   @
   #   render :new
   # end
 
