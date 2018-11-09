@@ -1,0 +1,6 @@
+<h1>Guest Info</h1>
+
+<b>Guest Name:</b> <%= @guest.name %><br>
+<b>Occupation: </b><%= @guest.occupation %>
+<p>
+<%= button_to "Return to All Guests", guests_path, method: :get %>
