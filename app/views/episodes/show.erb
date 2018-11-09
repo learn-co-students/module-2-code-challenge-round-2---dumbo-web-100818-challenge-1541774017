@@ -1,7 +1,7 @@
 <h1>Episode # <%= @episode.number %></h1>
 
 <ul>
-  <% @episode.appearances.each do |appearance| %>
-<li> <%= appearance.guest.name %> </li>
+  <% @episode.guests.each do |guets| %>
+<li> <%=link_to guest.name, guest %> </li>
 
 <% end %>
