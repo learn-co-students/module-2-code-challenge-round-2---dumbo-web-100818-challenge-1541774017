@@ -1,0 +1,13 @@
+<h1><%= @guest.name %> 😎</h1>
+<ul>
+<li><%= @guest.occupation.split.map(&:capitalize).join(' ') %> 🧐 </li>
+</ul>
+<br>
+<h2> Appearances: </h2>
+<ul>
+  <% @guest.episodes.each do |ep| %>
+  <li>   <%= link_to "Episode #{ep.number} - #{ep.date.strftime("%B %d, %Y")}", ep %>🕴🏻 </li>
+  <% end %>
+</ul>
+<br>
+👈  <%= link_to 'Back to Guests Page', guests_path %> 👈
