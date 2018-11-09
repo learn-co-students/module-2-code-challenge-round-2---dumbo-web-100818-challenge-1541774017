@@ -1,0 +1,10 @@
+class AddColumnToEpisodeGuests < ActiveRecord::Migration[5.1]
+  def change
+    add_column :episode_guests do |t|
+      t.integer :episode_id
+      t.integer :guest_id
+
+      t.timestamps
+    end
+  end
+end
