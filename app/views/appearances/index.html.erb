@@ -1,8 +1,8 @@
 <h1>All The Guests</h1>
 
 <ul>
-  <% @guests.each do |guest| %>
-    <li> <%= link_to guest.name, guest_path(guest)%></li>
+  <% @appearances.each do |a| %>
+    <li> <%= link_to a.name, apperance_path(a)%></li>
   <% end %>
 </ul>
 
