@@ -1,7 +1,7 @@
 <h1>Episode #<%= @episode.number %></h1>
-
+<h3>Guests:</h3>
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to guest.name, guest_path(guest) %></li>
   <% end %>
 </ul>

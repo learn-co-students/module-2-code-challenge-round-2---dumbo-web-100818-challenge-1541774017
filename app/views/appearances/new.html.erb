@@ -1,4 +1,6 @@
-<h1>Create an Appearance</h1>
+<%= render 'error_messages' %>
+
+<h1>Create an Appearance:</h1>
 <%= form_for @appearance do |f| %>
   <%= f.label :guest_id %>
   <%= f.collection_select :guest_id, Guest.all, :id, :name %><br/>
@@ -7,7 +9,7 @@
   <%= f.collection_select :episode_id, Episode.all, :id, :number %><br/>
 
   <%= f.label :rating %>
-  <%= f.select :rating, [1, 2, 3, 4, 5] %><br/>
+  <%= f.number_field :rating, in: 1..5 %></br>
 
   <%= f.submit %>
 <% end %>

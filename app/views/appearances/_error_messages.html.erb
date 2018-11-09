@@ -1,0 +1,7 @@
+<ul>
+  <% if @appearance.errors.full_messages.any? %>
+    <% @appearance.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+</ul>
