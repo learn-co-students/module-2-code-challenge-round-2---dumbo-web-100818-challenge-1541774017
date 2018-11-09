@@ -1,0 +1,9 @@
+
+<%= form_for @episode do |f|%>
+  <%=f.label :date %>
+  <%= f.text_field :date %>
+  <%= f.label :number%>
+  <%= f.number_field :number %>
+  <%= f.collection_select :guest_ids, @guests, :id, :name%>
+  <%= f.submit %>
+  <%end %>
