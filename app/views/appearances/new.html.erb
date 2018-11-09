@@ -1,0 +1,9 @@
+<%= form_for @appearance do |f| %>
+<%= f.label :guests %>
+<%= f.collection_select :guest_id, @guests, :id, :name %> </br>
+<%= f.label :episodes %>
+<%= f.collection_select :episode_id, @episodes, :id, :number %> </br>
+<%= f.label :rating %>
+<%= f.text_field :rating %> </br>
+<%= f.submit %>
+<% end %>
