@@ -1,0 +1,24 @@
+class GuestEpisodesController < ApplicationController
+
+  def new
+    @guest_episode = GuestEpisode.new
+  end
+
+  def create
+    @episode = Episode.find(params[:id])
+    @guest_episode = GuestEpisode.new(params[:guest_episode])
+    if @guests_episode.save
+      redirect_to @episode
+    else
+      redirect_to new
+    end
+  end
+
+
+
+
+  private
+  def guest_episode_params
+      params.require(:guests_episode).permit(:guest_id, :episode_id)
+    end
+end
