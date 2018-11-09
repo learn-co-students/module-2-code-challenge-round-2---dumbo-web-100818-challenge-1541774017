@@ -21,7 +21,6 @@ end
 date = Date.parse('2015-09-08')
 
 (1..40).each do |num|
-  Episode.create(date: date, number: num)
+  Episode.create(date: date, number: num, rating: num)
   date = date.next
 end
-

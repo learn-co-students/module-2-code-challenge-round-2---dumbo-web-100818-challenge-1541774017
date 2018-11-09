@@ -1,0 +1,10 @@
+<h1>Edit Episode Form</h1>
+<%=form_for @episode do |f| %>
+<%=f.label :date  %>
+<%=f.text_field :date %>
+<%=f.label :number %>
+<%=f.text_field :number %>
+<%=f.label :rating  %>
+<%=f.text_field :rating %>
+<%=f.submit %>
+<% end %>
