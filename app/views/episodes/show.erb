@@ -1,0 +1,11 @@
+<h1><%= @episode.date_and_number %></h1>
+<hr>
+<h1>Guests:</h1>
+<ol>
+  <% @guests.each do |guest| %>
+  <li><%= link_to guest.name, guest %></li>
+  <% end %>
+</ol>
+
+<%= link_to "Back to Episodes", guests_path %>
+<%= link_to "All Guests", episodes_path %>

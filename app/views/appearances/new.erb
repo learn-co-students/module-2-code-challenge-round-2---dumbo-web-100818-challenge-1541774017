@@ -1,0 +1,33 @@
+<% if @appearance.errors.any? %>
+  <div id="error_explanation" class="error">
+    <h2><%= pluralize(@appearance.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+    <% @appearance.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_for @appearance do |f| %>
+<div>
+  <%= f.label :guest  %>
+  <%= f.collection_select :guest_id, @guests, :id, :name %>
+</div>
+<div>
+  <%= f.label :episode %>
+  <%= f.collection_select :episode_id, @episodes, :id, :date_and_number %>
+</div>
+<div>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+</div>
+<div>
+  <%= f.submit %>
+</div>
+
+
+
+<% end %>

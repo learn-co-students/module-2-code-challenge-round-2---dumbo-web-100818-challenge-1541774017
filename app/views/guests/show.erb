@@ -1,0 +1,13 @@
+<h1><%= @guest.name %></h1>
+<h2>Profession: <%= @guest.occupation %></h2>
+
+<h3>Episode Appearances</h3>
+<ol>
+  <% @episodes.each do |episode| %>
+    <li><%= link_to episode.date_and_number, episode %></li> <%# "#{@guest.name}'s rating: #{episode.appearance.rating}" %>
+  <% end %>
+</ol>
+
+
+<%= link_to "Back to Guests", guests_path %>
+<%= link_to "All Episodes", episodes_path %>
